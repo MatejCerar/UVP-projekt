@@ -1,0 +1,27 @@
+%rebase('base.tpl')
+ <h1 class="title is-1">Ploščina starega in novega lika</h1>
+
+
+    Oglišča vnešenega lika: {{tocke}}
+    Ploščina lika, ki si ga vnesel v program je {{lik.ploscina()}} <br>
+    Slika vnešenega lika je: {{lik.narisi_lik()}} <br>
+
+
+    <h2>Nov lik</h2>
+
+    Vnešen lik je presekan z ravnino: {(x,y); x &#60 {{meja}} }
+    Oglišča novega lika so {{lik.naredi_nov_lik()}}.
+    Ploščina novega lika je {{lik.ploscina_novega_lika()}}
+
+    {{lik.narisi_nov_lik()}}
+
+
+
+%if lik.ploscina_novega_lika() == lik.ploscina():
+    Za izbrano mejo je presek ravnine in lika kar cel lik, zato sta tudi ploščini enaki. 
+%end
+
+
+ <form action="/" method="GET">
+    <input class="button is-light" type="submit" value="Nazaj na začetno stran"> 
+ </form>

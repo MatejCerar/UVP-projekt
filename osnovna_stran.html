@@ -1,0 +1,55 @@
+%rebase('base.tpl')
+
+  <h1 class="title is-1"> Ploščina lika </h1>
+
+  <section class="section">
+        Tukaj je program, za predmet Uvod v programiranje v prvem letniku FMF-ja.
+        Moj program vzame koordinate lika podane v smeri urinega kazalca in narise ta lik ter poda ploščino tega lika. 
+        program sprejem tudi mejo M. Program nato podan lih preseka s polravnino {(x,y); x &#60 M} in vrne oglišča ter ploščino novega lika. 
+        Idejo za projekt sem dobil pri nalogah izpitov pri predmetu Proseminar 1, kjer se velikokrat pojavi naloga, kjer so podana oglišča lika ter poljubna taka ravnina, 
+        študenti pa morajo najti funkcjio, ki izračuna ploščina za poljubno mejo. 
+        Moj projekt pomaga, pri preverjanju pravinosti funkcije za dotično mejo. </section>
+
+  <h2>Primer</h2>
+  <section class="section">
+      V spodnjem primeru, si lahko ogledate, kaj moj program naredi. <br>
+      <b>Vnešeni podatki:</b> <br>
+      Oglišča lika:  [0,0], [1,1], [3,0], [2,-2] <br>
+      meja: 2 <br>
+      <b>Podatki, ki jih program izračuna:</b> <br>
+      Ploščina: {{primer.ploscina_lika()}} <br> 
+      Oglišča novega lika: {{primer.naredi_nov_lik()}} <br>
+      Ploščina novega lika: {{primer.ploscina_novega_lika()}} <br>
+  
+  </section>
+
+  <h2>Vnašanje podatkov</h2>
+  <section class="section">
+    Ker za izvajanje programa uporabljam Python nekaj opozoril, kako zapisati številke:
+    <ul>
+      <li>Čeprav v slovenščini uporabljamo decimalno vejico, Python za decimalno vejico uporablja decimalno piko,
+        ki je navadna pika na tipkovnici. </li>
+      <li>Program sprejema realna števila - koordiante točk in meja.</li>
+      <li>Oglišča vpišeš po koordinatah [x,y]. Oglišča naj bodo podana v smeri urinega kazalca, sosednji točki predstavlajta začetek in konec stranice.
+          Da bo nastal lik, vnesi vsaj tri tocke. Poglej primer zgoraj za boljše razumevanje.</li>
+      <li>lik naj bo konveksen</li>
+    </ul> 
+  </section>
+
+  <form action="/izracun/" method="POST">
+    
+    
+   Seznam oglišč: <input class="input" type="text" placeholder="vnesi točke" name="tocke">
+   Meja: <input class="input" type="number" placeholder="vnesi mejo" name="meja">
+   <input class="button is-light" type="submit" value="Naprej">
+
+  </form>
+
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        2020, Matej Cerar, študent matematike, FMF
+      </p>
+    </div>
+  </footer>
+
